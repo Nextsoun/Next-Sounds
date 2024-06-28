@@ -62,8 +62,64 @@ export default function Home() {
       <section>
         <Servicios />
       </section>
-      <section>
-        <Contact />
+      <section className="flex justify-center items-center min-h-screen bg-gray-100 text-black">
+        <form className="w-full max-w-lg bg-white p-8 rounded-lg shadow-md">
+          <div className="mb-4">
+            <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
+              Nombre
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Nombre"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="phone" className="block text-gray-700 text-sm font-bold mb-2">
+              Teléfono
+            </label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Teléfono"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+              Dirección de Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Dirección de Email"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
+              Mensaje
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Mensaje"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            ></textarea>
+          </div>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            >
+              Enviar
+            </button>
+          </div>
+        </form>
       </section>
     </main>
   );
