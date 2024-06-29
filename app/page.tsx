@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Servicios, Contact } from "@/components";
 import { Roboto_Condensed, Cabin } from "next/font/google";
+import { createContact } from "./actions/contact.actions";
 
 const roboto = Roboto_Condensed({ subsets: ["latin"] });
 const cabin = Cabin({ subsets: ["latin"] });
@@ -63,11 +64,11 @@ export default function Home() {
         <Servicios />
       </section>
       <section className="flex justify-center items-center min-h-screen bg-gray-100 text-black">
-        <form className="w-full max-w-lg bg-white p-8 rounded-lg shadow-md">
+        <form action={createContact} className="w-full max-w-lg bg-white p-8 rounded-lg shadow-md">
           <div className="mb-4">
-            <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
+            {/* <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
               Nombre
-            </label>
+            </label> */}
             <input
               type="text"
               name="name"
@@ -77,11 +78,11 @@ export default function Home() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="phone" className="block text-gray-700 text-sm font-bold mb-2">
+            {/* <label htmlFor="phone" className="block text-gray-700 text-sm font-bold mb-2">
               Teléfono
-            </label>
+            </label> */}
             <input
-              type="tel"
+              type="text"
               name="phone"
               id="phone"
               placeholder="Teléfono"
@@ -89,9 +90,9 @@ export default function Home() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+            {/* <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
               Dirección de Email
-            </label>
+            </label> */}
             <input
               type="email"
               name="email"
@@ -101,9 +102,9 @@ export default function Home() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
+            {/* <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
               Mensaje
-            </label>
+            </label> */}
             <textarea
               name="message"
               id="message"
