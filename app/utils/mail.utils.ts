@@ -11,9 +11,14 @@ const transport = nodemailer.createTransport({
   },
 } as SMTPTransport.Options);
 
+type Address = {
+  name: string;
+  address: string;
+};
+
 type SendEmailDTO = {
-  sender: Mail.Address;
-  recipients: Mail.Address[];
+  sender: Address;
+  recipients: Address[];
   subject: string;
   message: string;
 };
