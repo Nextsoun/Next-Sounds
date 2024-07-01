@@ -28,7 +28,7 @@ export default function Home() {
 
       <section className="bg-[#1B262C] flex py-10 px-2 lg:py-24" id="about">
         <div className="flex flex-col-reverse justify-center lg:grid lg:grid-cols-2 lg:gap-8 lg:px-28 ">
-          <div className="flex flex-col justify-start py-4 lg:text-sm text-sm">
+          <div className="flex flex-col lg:justify-start py-4 lg:text-sm">
             <h1 className="text-2xl lg:text-4xl font-extrabold text-white">ABOUT US</h1>
             <span className="border-t-4 border-[#C06048] my-6 w-28" />
             <p>Welcome to Echo Chamber Studios, where music and creativity flow freely.</p>
@@ -105,105 +105,105 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col justify-center items-center min-h-screen bg-[#1b262c] text-black" id="contact">
-        <div className="flex justify-center p-6">
+        <div className="flex flex-col justify-center">
           <h2 className="text-4xl text-white">Contacto</h2>
+          <div className="flex justify-center p-4 ">
+            <span className="px-1 py-1 bg-[#c0604863] rounded-full"></span>
+            <span className="px-6 py-1 bg-[#C06048] rounded-full mx-2" />
+            <span className="px-1 py-1 bg-[#c0604863] rounded-full"></span>
+          </div>
         </div>
-        <div className="flex justify-center p-4 ">
-          <span className="px-1 py-1 bg-[#c0604863] rounded-full"></span>
-          <span className="px-6 py-1 bg-[#C06048] rounded-full mx-2" />
-          <span className="px-1 py-1 bg-[#c0604863] rounded-full"></span>
-        </div>
+        <div className="lg:grid lg:grid-cols-2 gap-2 flex flex-col">
+          <div className="pb-4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0167125041007!2d-58.3815704!3d-34.603738899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1719841920723!5m2!1ses-419!2sar"
+              className="w-full h-72 lg:w-[700px] lg:h-[300px] border rounded-lg"
+              loading="lazy"
+            />
 
-        <form action={createContact} className="w-full max-w-lg bg-white p-8 rounded-lg shadow-md">
-          <div className="mb-4">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Nombre"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            <div>
+              <ul className="p-2">
+                <li className="text-white">Manhattan, New York, NY, United States</li>{" "}
+              </ul>
+              <ul className="text-[#9b5b48]">
+                <li>
+                  <a href="tel:+1-985-245-1730" className="flex items-center space-x-2">
+                    <i
+                      className="w-6 h-6 bg-current"
+                      style={{
+                        mask: "url('https://images.cdn-files-a.com/ready_uploads/svg/phone.svg?v=2')",
+                        WebkitMask: "url('https://images.cdn-files-a.com/ready_uploads/svg/phone.svg?v=2')",
+                      }}
+                      aria-label="fa fa-phone"
+                    >
+                      &nbsp;
+                    </i>
+                    <span dir="ltr">+1-985-245-1730</span>
+                  </a>
+                </li>{" "}
+                <li>
+                  <a href="mailto:example@example.com" className="flex items-center space-x-2">
+                    <i
+                      className="w-6 h-6 bg-current"
+                      style={{
+                        mask: "url('https://images.cdn-files-a.com/ready_uploads/svg/envelope-o.svg?v=2')",
+                        WebkitMask: "url('https://images.cdn-files-a.com/ready_uploads/svg/envelope-o.svg?v=2')",
+                      }}
+                      aria-label="envelope-o"
+                    >
+                      &nbsp;
+                    </i>
+                    <span>example@example.com</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="mb-4">
-            <input
-              type="text"
-              name="phone"
-              id="phone"
-              placeholder="Teléfono"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-          <div className="mb-4">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Dirección de Email"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-          <div className="mb-4">
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Mensaje"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            ></textarea>
-          </div>
-          <div className="flex justify-center">
-            <button
-              type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            >
-              Enviar
-            </button>
-          </div>
-        </form>
-      </section>
-      <section>
-        <div>
-          <ul>
-            <li>Manhattan, New York, NY, United States</li>{" "}
-          </ul>
-          <ul className="text-[#9b5b48]">
-            <li>
-              <a href="tel:+1-985-245-1730" className="flex items-center space-x-2">
-                <i
-                  className="w-6 h-6 bg-current"
-                  style={{
-                    mask: "url('https://images.cdn-files-a.com/ready_uploads/svg/phone.svg?v=2')",
-                    WebkitMask: "url('https://images.cdn-files-a.com/ready_uploads/svg/phone.svg?v=2')",
-                  }}
-                  aria-label="fa fa-phone"
-                >
-                  &nbsp;
-                </i>
-                <span dir="ltr">+1-985-245-1730</span>
-              </a>
-            </li>{" "}
-            <li>
-              <a href="mailto:example@example.com" className="flex items-center space-x-2">
-                <i
-                  className="w-6 h-6 bg-current"
-                  style={{
-                    mask: "url('https://images.cdn-files-a.com/ready_uploads/svg/envelope-o.svg?v=2')",
-                    WebkitMask: "url('https://images.cdn-files-a.com/ready_uploads/svg/envelope-o.svg?v=2')",
-                  }}
-                  aria-label="envelope-o"
-                >
-                  &nbsp;
-                </i>
-                <span>example@example.com</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0167125041007!2d-58.3815704!3d-34.603738899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1719841920723!5m2!1ses-419!2sar"
-            className="w-full h-72 lg:w-[700px] lg:h-[300px]"
-            loading="lazy"
-          />
+          <form action={createContact} className="w-full max-w-lg bg-white p-8 rounded-lg shadow-md">
+            <div className="mb-4">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Nombre"
+                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div className="mb-4">
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="Teléfono"
+                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div className="mb-4">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Dirección de Email"
+                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div className="mb-4">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Mensaje"
+                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></textarea>
+            </div>
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-full rounded focus:outline-none focus:shadow-outline"
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
