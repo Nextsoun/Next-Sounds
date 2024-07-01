@@ -160,6 +160,52 @@ export default function Home() {
           </div>
         </form>
       </section>
+      <section>
+        <div>
+          <ul>
+            <li>Manhattan, New York, NY, United States</li>{" "}
+          </ul>
+          <ul className="text-[#9b5b48]">
+            <li>
+              <a href="tel:+1-985-245-1730" className="flex items-center space-x-2">
+                <i
+                  className="w-6 h-6 bg-current"
+                  style={{
+                    mask: "url('https://images.cdn-files-a.com/ready_uploads/svg/phone.svg?v=2')",
+                    WebkitMask: "url('https://images.cdn-files-a.com/ready_uploads/svg/phone.svg?v=2')",
+                  }}
+                  aria-label="fa fa-phone"
+                >
+                  &nbsp;
+                </i>
+                <span dir="ltr">+1-985-245-1730</span>
+              </a>
+            </li>{" "}
+            <li>
+              <a href="mailto:example@example.com" className="flex items-center space-x-2">
+                <i
+                  className="w-6 h-6 bg-current"
+                  style={{
+                    mask: "url('https://images.cdn-files-a.com/ready_uploads/svg/envelope-o.svg?v=2')",
+                    WebkitMask: "url('https://images.cdn-files-a.com/ready_uploads/svg/envelope-o.svg?v=2')",
+                  }}
+                  aria-label="envelope-o"
+                >
+                  &nbsp;
+                </i>
+                <span>example@example.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0167125041007!2d-58.3815704!3d-34.603738899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1719841920723!5m2!1ses-419!2sar"
+            className="w-full h-72 lg:w-[700px] lg:h-[300px]"
+            loading="lazy"
+          />
+        </div>
+      </section>
     </main>
   );
 }
