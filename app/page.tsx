@@ -17,7 +17,7 @@ export default function Home() {
         className="relative bg-[url('/Consola.jpg')] fill-current bg-center bg-cover object-cover h-full pt-24 lg:pt-0 lg:min-h-screen flex items-center justify-center lg:justify-end lg:px-36 m-0"
         id="home"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50"></div>
+        <div className="absolute inset-0 lg:bg-gradient-to-r lg:from-transparent lg:to-black/80 bg-gradient-to-r from-black/80 via-black/90 to-black/80"></div>
         <div className="relative w-full lg:w-1/2 flex flex-col items-start text-center justify-center p-8 z-10">
           <h1 className="text-2xl lg:text-6xl font-bold  text-white">Where Sound Comes To Life</h1>
           <h2 className="text-lg lg:text-4xl text-white">
