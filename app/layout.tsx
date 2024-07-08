@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { Navbar } from "@/components/navbar/Navbar";
+import { Toaster } from "sonner";
 
 import "./globals.css";
-
-
 
 export const metadata: Metadata = {
   title: "Next Sounds",
@@ -15,8 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html className="scroll-smooth" lang="en">
+      <body>
+        <Navbar />
+        {children}
+        <Toaster richColors />
+      </body>
     </html>
   );
 }
