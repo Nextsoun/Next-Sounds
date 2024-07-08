@@ -6,6 +6,7 @@ import Music from "@/components/servicios/Music";
 import Mic from "@/components/servicios/Mic";
 import Soundwave from "@/components/servicios/Soundwave";
 import { createContact } from "./actions/contact.actions";
+import Contact from "@/components/contact/Contact";
 
 const roboto = Roboto_Condensed({ subsets: ["latin"] });
 const cabin = Cabin({ subsets: ["latin"] });
@@ -169,51 +170,9 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <form action={createContact} className="p-8 w-full h-full bg-white rounded-lg shadow-md">
-            <div className="mb-4">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Nombre"
-                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div className="mb-4">
-              <input
-                type="text"
-                name="phone"
-                id="phone"
-                placeholder="Teléfono"
-                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div className="mb-4">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Dirección de Email"
-                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div className="mb-4">
-              <textarea
-                name="message"
-                id="message"
-                placeholder="Mensaje"
-                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              ></textarea>
-            </div>
-            <div className="flex justify-center">
-              <button
-                type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-full rounded focus:outline-none focus:shadow-outline"
-              >
-                Enviar
-              </button>
-            </div>
-          </form>
+          <div className="p-8 w-full h-full bg-white rounded-lg shadow-md">
+            <Contact />
+          </div>
         </div>
       </section>
     </main>
