@@ -1,6 +1,7 @@
 "use server";
 
-import prisma from "../utils/prisma";
+import { compileAdminTemplate, compileContactTemplate, sendAdminEmail, sendContactEmail } from "../utils/mail.utils";
+import prisma from "../utils/prisma.utils";
 
 export const createContact = async (formData: FormData) => {
   const contactName = formData.get("name")?.toString();
@@ -18,5 +19,24 @@ export const createContact = async (formData: FormData) => {
       message: contactMessage,
     },
   });
+
+  const body = compileAdminTemplate(contactName, contactMessage, contactPhone, contactEmail);
+
+  await sendAdminEmail({
+    name: contactName,
+    message: contactMessage,
+    email: contactEmail,
+    phone: contactPhone,
+    body: body,
+  });
+
+  const bodyContact = compileContactTemplate(contactName);
+
+  await sendContactEmail({
+    name: contactName,
+    email: contactEmail,
+    bodyContact: bodyContact,
+  });
+
   return newContact;
 };
