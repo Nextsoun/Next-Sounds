@@ -14,26 +14,28 @@ export default function Home() {
   return (
     <main className="mx-auto">
       <section
-        className="relative bg-[url('/Consola.jpg')] fill-current bg-center bg-cover object-cover min-h-screen flex items-center justify-center lg:justify-end lg:px-36 m-0"
+        className="relative bg-[url('/Consola.jpg')] fill-current bg-center bg-cover object-cover h-full pt-24 lg:pt-0 lg:min-h-screen flex items-center justify-center lg:justify-end lg:px-36 m-0"
         id="home"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50"></div>
         <div className="relative w-full lg:w-1/2 flex flex-col items-start text-center justify-center p-8 z-10">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-4 text-white">Where Sound Comes To Life</h1>
-          <h2 className="text-2xl lg:text-4xl text-white">
+          <h1 className="text-2xl lg:text-6xl font-bold  text-white">Where Sound Comes To Life</h1>
+          <h2 className="text-lg lg:text-4xl text-white">
             Let your music echo through the ages at Echo Chamber Studios
           </h2>
         </div>
       </section>
 
-      <section className="bg-[#1B262C] min-h-screen items-center justify-center p-2 m-auto" id="about">
-        <div className="flex flex-col justify-center pt-20 pb-0">
-          <div className="flex flex-col pl-28 ">
-            <h1 className="text-2xl lg:text-4xl font-extrabold text-white">ABOUT US</h1>
-            <span className="border-t-4 border-[#C06048] my-6 w-28" />
+      <section className="bg-[#1B262C] lg:min-h-screen flex items-center justify-center p-2 lg:py-10 m-auto" id="about">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 lg:px-28 w-full">
+          <div className="order-2 lg:order-1 lg:col-span-2">
+            <div className="flex flex-col lg:pt-10">
+              <h1 className="text-2xl lg:text-4xl font-extrabold text-white">ABOUT US</h1>
+              <span className="border-t-4 border-[#C06048] my-6 w-28" />
+            </div>
           </div>
-          <div className="flex flex-col-reverse justify-center lg:grid lg:grid-cols-2 lg:gap-4 lg:px-28 ">
-            <div className="flex flex-col lg:justify-start lg:text-sm">
+          <div className="order-3 lg:order-2 lg:row-start-2 lg:col-start-1 lg:col-end-2">
+            <div className="flex flex-col lg:justify-start lg:text-lg text-white">
               <p>Welcome to Echo Chamber Studios, where music and creativity flow freely.</p>
               <br />
               <p>
@@ -57,9 +59,9 @@ export default function Home() {
                 us help you make your musical dreams a reality.
               </p>
             </div>
-            <div className="w-full h-full">
-              <Image src="/AboutUs.webp" alt="Recording" height={1000} width={1000} />
-            </div>
+          </div>
+          <div className="order-1 lg:order-3 lg:row-start-2 lg:col-start-2 lg:col-end-3">
+            <Image src="/AboutUs.webp" alt="Recording" height={1000} width={1000} />
           </div>
         </div>
       </section>
@@ -76,7 +78,7 @@ export default function Home() {
           </div>
         </div>
         <div className="lg:grid lg:grid-cols-4 lg:justify-center text-center gap-4 ">
-          <div className="flex flex-col items-center justify-center">
+          <div className="p-6 flex flex-col items-center justify-center">
             <Mixer />
             <h4 className="py-6 text-lg">Mezcla</h4>
             <p>
@@ -100,7 +102,7 @@ export default function Home() {
               dolorum
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          <div className="p-6 flex flex-col items-center justify-center">
             <Mic />
             <h4 className="py-6 text-lg">Grabacion de voces</h4>
             <p>
