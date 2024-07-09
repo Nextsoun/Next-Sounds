@@ -1,5 +1,6 @@
 "use client";
 import { createContact } from "@/app/actions/contact.actions";
+import { error } from "console";
 import React, { useRef } from "react";
 import { toast } from "sonner";
 
@@ -39,10 +40,9 @@ const Contact = () => {
           console.log(data);
 
           if (data) {
-            console.log("entre aca");
             return `${data.name} tu solicitud fue enviada.`;
           } else {
-            return "Solicitud enviada.";
+            `${data} tu solicitud fue no enviada.`;
           }
         },
         error: (err) => `Error: ${err.message}`,
