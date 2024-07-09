@@ -36,6 +36,8 @@ const Contact = () => {
       toast.promise(contactPromise, {
         loading: "Enviando...",
         success: (data) => {
+          console.log(data);
+
           if (data) {
             return `${data.name} tu solicitud fue enviada.`;
           } else {
