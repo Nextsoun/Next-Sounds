@@ -42,7 +42,7 @@ const Contact = () => {
           if (data) {
             return `${data.name} tu solicitud fue enviada.`;
           } else {
-            `${data} tu solicitud fue no enviada.`;
+            return `${data} tu solicitud fue no enviada.`;
           }
         },
         error: (err) => `Error: ${err.message}`,
