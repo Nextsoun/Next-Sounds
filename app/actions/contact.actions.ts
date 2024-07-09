@@ -9,9 +9,16 @@ export const createContact = async (formData: FormData) => {
     const contactPhone = formData.get("phone")?.toString();
     const contactEmail = formData.get("email")?.toString();
     const contactMessage = formData.get("message")?.toString();
-    // console.log({ formData });
 
-    if (!contactName || !contactPhone || !contactEmail || !contactMessage) return;
+    if (!contactName || !contactPhone || !contactEmail || !contactMessage) return "faltan datos";
+
+    const tuquis = {
+      name: contactName,
+      phone: contactPhone,
+      email: contactEmail,
+      message: contactMessage,
+    };
+    console.log({ tuquis });
 
     const newContact = await prisma.contact.create({
       data: {
@@ -41,7 +48,7 @@ export const createContact = async (formData: FormData) => {
       bodyContact: bodyContact,
     });
 
-    return newContact;
+    return { newContact, tuquis };
   } catch (error) {
     console.error(error);
   }
