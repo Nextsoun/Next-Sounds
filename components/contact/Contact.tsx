@@ -39,6 +39,7 @@ const Contact = () => {
           console.log(data);
 
           if (data) {
+            console.log("entre aca");
             return `${data.name} tu solicitud fue enviada.`;
           } else {
             return "Solicitud enviada.";
@@ -49,9 +50,9 @@ const Contact = () => {
 
       // const contact = await contactPromise;
 
-      if (formRef.current) {
-        formRef.current.reset();
-      }
+      // if (formRef.current) {
+      //   formRef.current.reset();
+      // }
     } catch (error) {
       console.error(error);
     }

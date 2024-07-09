@@ -9,7 +9,7 @@ export const createContact = async (formData: FormData) => {
     const contactPhone = formData.get("phone")?.toString();
     const contactEmail = formData.get("email")?.toString();
     const contactMessage = formData.get("message")?.toString();
-    console.log({ formData });
+    // console.log({ formData });
 
     if (!contactName || !contactPhone || !contactEmail || !contactMessage) return;
 
@@ -21,7 +21,7 @@ export const createContact = async (formData: FormData) => {
         message: contactMessage,
       },
     });
-    console.log({ newContact });
+    // console.log({ newContact });
 
     const body = compileAdminTemplate(contactName, contactMessage, contactPhone, contactEmail);
 
