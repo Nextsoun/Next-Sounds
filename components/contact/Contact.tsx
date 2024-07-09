@@ -1,6 +1,5 @@
 "use client";
 import { createContact } from "@/app/actions/contact.actions";
-import { error } from "console";
 import React, { useRef } from "react";
 import { toast } from "sonner";
 

@@ -12,14 +12,6 @@ export const createContact = async (formData: FormData) => {
 
     if (!contactName || !contactPhone || !contactEmail || !contactMessage) return "faltan datos";
 
-    const tuquis = {
-      name: contactName,
-      phone: contactPhone,
-      email: contactEmail,
-      message: contactMessage,
-    };
-    console.log({ tuquis });
-
     const newContact = await prisma.contact.create({
       data: {
         name: contactName,
@@ -48,7 +40,7 @@ export const createContact = async (formData: FormData) => {
       bodyContact: bodyContact,
     });
 
-    return { newContact, tuquis };
+    return newContact;
   } catch (error) {
     console.error(error);
   }
