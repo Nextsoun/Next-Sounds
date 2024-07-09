@@ -10,7 +10,7 @@ export const createContact = async (formData: FormData) => {
     const contactEmail = formData.get("email")?.toString();
     const contactMessage = formData.get("message")?.toString();
 
-    if (!contactName || !contactPhone || !contactEmail || !contactMessage) return "faltan datos";
+    if (!contactName || !contactPhone || !contactEmail || !contactMessage) return;
 
     const newContact = await prisma.contact.create({
       data: {
