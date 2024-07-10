@@ -38,11 +38,7 @@ const Contact = () => {
         success: (data) => {
           console.log(data);
 
-          if (data) {
-            return `${data.name} tu solicitud fue enviada.`;
-          } else {
-            return `${data} tu solicitud fue no enviada.`;
-          }
+          return ` tu solicitud fue enviada.`;
         },
         error: (err) => `Error: ${err.message}`,
       });
