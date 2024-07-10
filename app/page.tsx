@@ -20,9 +20,9 @@ export default function Home() {
       >
         <div className="absolute inset-0 lg:bg-gradient-to-r lg:from-transparent lg:to-black/80 bg-gradient-to-r from-black/80 via-black/90 to-black/80"></div>
         <div className="relative w-full lg:w-1/2 flex flex-col items-start text-center justify-center p-8 z-10">
-          <h1 className="text-2xl lg:text-6xl font-bold  text-white">Where Sound Comes To Life</h1>
+          <h1 className="text-2xl lg:text-6xl font-bold  text-white">Donde el sonido cobra vida</h1>
           <h2 className="text-lg lg:text-4xl text-white">
-            Let your music echo through the ages at Echo Chamber Studios
+            Deja que tu música resuene a través de los tiempos en <b>Next Sounds</b> Studios
           </h2>
         </div>
       </section>
@@ -31,33 +31,33 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 lg:px-28 w-full">
           <div className="order-2 lg:order-1 lg:col-span-2">
             <div className="flex flex-col lg:pt-10">
-              <h1 className="text-2xl lg:text-4xl font-extrabold text-white">ABOUT US</h1>
+              <h1 className="text-2xl lg:text-4xl font-extrabold text-white">SOBRE NOSOTROS</h1>
               <span className="border-t-4 border-[#C06048] my-6 w-28" />
             </div>
           </div>
           <div className="order-3 lg:order-2 lg:row-start-2 lg:col-start-1 lg:col-end-2">
             <div className="flex flex-col lg:justify-start lg:text-lg text-white">
-              <p>Welcome to Echo Chamber Studios, where music and creativity flow freely.</p>
+              <p>Bienvenido a Next Sounds Studios, donde la música y la creatividad fluyen libremente.</p>
               <br />
               <p>
-                Our state-of-the-art studio is designed to bring your musical vision to life, whether a seasoned
-                professional or a rising star.
+                Nuestro estudio de última generación está diseñado para hacer realidad su visión musical, ya sea un
+                profesional experimentado o una estrella en ascenso.
               </p>
               <br />
               <p>
-                With a team of experienced engineers and producers, we provide personalized services that cater to your
-                unique sound and style.
+                Con un equipo de ingenieros y productores experimentados, brindamos servicios personalizados que se
+                adaptan a su sonido y estilo únicos.
               </p>
               <br />
               <p>
-                From recording and mixing to mastering and post-production, we offer a full range of services that will
-                take your music to the next level.
+                Desde grabación y mezcla hasta masterización y postproducción, ofrecemos una gama completa de servicios
+                que llevarán tu música al siguiente nivel.
               </p>
               <br />
               <p>
-                Our studio is equipped with the latest technology and equipment to ensure the highest quality sound
-                possible. At Echo Chamber Studios, we believe that every artist deserves to have their voice heard. Let
-                us help you make your musical dreams a reality.
+                Nuestro estudio está equipado con la última tecnología y equipos para garantizar la más alta calidad de
+                sonido posible. En Next Sounds Studios, creemos que cada artista merece que se escuche su voz.
+                Permítanos ayudarle a hacer realidad sus sueños musicales.
               </p>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function Home() {
       <section className="min-h-screen flex flex-col items-center justify-center p-2" id="services">
         <div className="p-4">
           <div>
-            <h2 className="text-4xl">Servicios</h2>
+            <h2 className="text-4xl">SERVICIOS</h2>
           </div>
           <div className="flex justify-center py-10">
             <span className="px-1 py-1 bg-[#c0604863] rounded-full"></span>
@@ -81,33 +81,24 @@ export default function Home() {
         <div className="lg:grid lg:grid-cols-4 lg:justify-center text-center gap-4 ">
           <div className="p-6 flex flex-col items-center justify-center">
             <Mixer />
-            <h4 className="py-6 text-lg">Mezcla</h4>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, consequuntur aperiam porro officia
-              dicta
-            </p>
-          </div>
-          <div className="p-6 flex flex-col items-center justify-center">
-            <Music />
-            <h4 className="py-6 text-lg">Master</h4>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis sit earum aperiam modi, dolorem
-              quaerat
-            </p>
+            <h4 className="py-6 text-lg">Grabación y mezcla</h4>
+            <p>Nuestro equipo de ingenieros y productores trabajará con usted para hacer realidad su visión musical.</p>
           </div>
           <div className="p-6 flex flex-col items-center justify-center">
             <Soundwave />
-            <h4 className="py-6 text-lg">Post-Produccion</h4>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam voluptatibus eveniet laboriosam,
-              dolorum
-            </p>
+            <h4 className="py-6 text-lg">Masterización</h4>
+            <p>Puliremos tus pistas y nos aseguraremos de que suenen lo mejor posible en cualquier plataforma.</p>
+          </div>
+          <div className="p-6 flex flex-col items-center justify-center">
+            <Music />
+            <h4 className="py-6 text-lg">Post-Producción</h4>
+            <p>Desde la edición hasta el diseño de sonido, te ayudaremos a darle los toques finales a tu proyecto.</p>
           </div>
           <div className="p-6 flex flex-col items-center justify-center">
             <Mic />
-            <h4 className="py-6 text-lg">Grabacion de voces</h4>
+            <h4 className="py-6 text-lg">Grabación de voz en off</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestias earum molestiae culpa eum illo
+              ¿Necesitas grabar una voz en off para tu proyecto? Utilice nuestro estudio con equipos de primera línea.
             </p>
           </div>
         </div>
@@ -128,13 +119,13 @@ export default function Home() {
         <div className="md:grid md:grid-cols-2 gap-4 w-full h-full flex flex-col items-center justify-center">
           <div className="flex flex-col w-full h-full justify-center">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0167125041007!2d-58.3815704!3d-34.603738899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1719841920723!5m2!1ses-419!2sar"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2397.4306059380187!2d-58.42306969082248!3d-34.570734462090684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb59f11be0fdd%3A0x11c0e08ac98c6f65!2sAv.%20Infanta%20Isabel%20110%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1sen!2sus!4v1720484517047!5m2!1sen!2sus"
               className="w-full h-full border rounded-lg"
               loading="lazy"
             />
             <div className="justify-start">
               <ul className="p-2">
-                <li className="text-white">Manhattan, New York, NY, United States</li>
+                <li className="text-white">Av. Infanta Isabel 110, Cdad. Autónoma de Buenos Aires, Argentina</li>
               </ul>
               <ul className="text-[#9b5b48]">
                 <li>
@@ -149,7 +140,7 @@ export default function Home() {
                     >
                       &nbsp;
                     </i>
-                    <span dir="ltr">+1-985-245-1730</span>
+                    <span dir="ltr">+54-112-345678</span>
                   </a>
                 </li>
                 <li>
@@ -164,7 +155,7 @@ export default function Home() {
                     >
                       &nbsp;
                     </i>
-                    <span>example@example.com</span>
+                    <span>nextsong24@gmail.com</span>
                   </a>
                 </li>
               </ul>
