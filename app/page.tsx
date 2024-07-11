@@ -5,7 +5,6 @@ import Mixer from "@/components/servicios/Mixer";
 import Music from "@/components/servicios/Music";
 import Mic from "@/components/servicios/Mic";
 import Soundwave from "@/components/servicios/Soundwave";
-import { createContact } from "./actions/contact.actions";
 import Contact from "@/components/contact/Contact";
 
 const roboto = Roboto_Condensed({ subsets: ["latin"] });
