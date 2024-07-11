@@ -1,5 +1,4 @@
 "use client";
-import { createContact } from "@/app/actions/contact.actions";
 import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
