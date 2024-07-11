@@ -2,7 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { compileAdminTemplate, compileContactTemplate, sendAdminEmail, sendContactEmail } from "../utils/mail.utils";
-import prisma from "../utils/prisma.utils";
+import { prisma } from "../utils/prisma.utils";
 
 export const createContact = async (formData: FormData) => {
   try {
