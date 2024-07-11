@@ -6,27 +6,27 @@ import { toast } from "sonner";
 
 const Contact = () => {
   const { handleSubmit, register } = useForm();
-  const formRef = useRef<HTMLFormElement>(null);
+  // const formRef = useRef<HTMLFormElement>(null);
 
-  const validateForm = (formData: FormData) => {
-    const name = formData.get("name")?.toString().trim();
-    const phone = formData.get("phone")?.toString().trim();
-    const email = formData.get("email")?.toString().trim();
-    const message = formData.get("message")?.toString().trim();
+  // const validateForm = (formData: FormData) => {
+  //   const name = formData.get("name")?.toString().trim();
+  //   const phone = formData.get("phone")?.toString().trim();
+  //   const email = formData.get("email")?.toString().trim();
+  //   const message = formData.get("message")?.toString().trim();
 
-    if (!name || !phone || !email || !message) {
-      toast.warning("Todos los campos son obligatorios.");
-      return false;
-    }
+  //   if (!name || !phone || !email || !message) {
+  //     toast.warning("Todos los campos son obligatorios.");
+  //     return false;
+  //   }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      toast.warning("Por favor, ingrese un email válido.");
-      return false;
-    }
+  //   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //   if (!emailRegex.test(email)) {
+  //     toast.warning("Por favor, ingrese un email válido.");
+  //     return false;
+  //   }
 
-    return true;
-  };
+  //   return true;
+  // };
 
   // const handleSubmit = async (formData: FormData) => {
   //   if (!validateForm(formData)) {
