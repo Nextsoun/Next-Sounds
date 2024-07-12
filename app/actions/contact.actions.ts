@@ -20,25 +20,24 @@ export const createContact = async (formData: FormData) => {
         message: contactMessage,
       },
     });
-    console.log(newContact);
 
-    // const body = compileAdminTemplate(contactName, contactMessage, contactPhone, contactEmail);
+    const body = compileAdminTemplate(contactName, contactMessage, contactPhone, contactEmail);
 
-    // await sendAdminEmail({
-    //   name: contactName,
-    //   message: contactMessage,
-    //   email: contactEmail,
-    //   phone: contactPhone,
-    //   body: body,
-    // });
+    await sendAdminEmail({
+      name: contactName,
+      message: contactMessage,
+      email: contactEmail,
+      phone: contactPhone,
+      body: body,
+    });
 
-    // const bodyContact = compileContactTemplate(contactName);
+    const bodyContact = compileContactTemplate(contactName);
 
-    // await sendContactEmail({
-    //   name: contactName,
-    //   email: contactEmail,
-    //   bodyContact: bodyContact,
-    // });
+    await sendContactEmail({
+      name: contactName,
+      email: contactEmail,
+      bodyContact: bodyContact,
+    });
 
     return newContact;
   } catch (error) {
