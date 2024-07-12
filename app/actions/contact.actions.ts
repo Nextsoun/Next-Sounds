@@ -20,6 +20,7 @@ export const createContact = async (formData: FormData) => {
         message: contactMessage,
       },
     });
+    console.log(newContact);
 
     const body = compileAdminTemplate(contactName, contactMessage, contactPhone, contactEmail);
 
