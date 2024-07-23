@@ -30,7 +30,7 @@ export const createContact = async (formData: FormData): Promise<ContactFormData
       },
     });
 
-    Promise.all([
+    await Promise.all([
       sendAdminEmail({
         name: contactName,
         message: contactMessage,
