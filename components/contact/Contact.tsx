@@ -1,12 +1,13 @@
 "use client";
-import { createContact } from "@/app/actions/contact.actions";
-import React, { useRef } from "react";
-import { toast } from "sonner";
 
-const Contact = () => {
+import React, { useRef, FormEvent } from "react";
+import { toast } from "sonner";
+import { createContact } from "@/app/actions/contact.actions";
+
+const Contact: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
-  const validateForm = (formData: FormData) => {
+  const validateForm = (formData: FormData): boolean => {
     const name = formData.get("name")?.toString().trim();
     const phone = formData.get("phone")?.toString().trim();
     const email = formData.get("email")?.toString().trim();
@@ -42,31 +43,30 @@ const Contact = () => {
             return "Solicitud enviada.";
           }
         },
+
         error: (err) => `Error: ${err.message}`,
       });
 
-      // const contact = await contactPromise;
+      await contactPromise;
 
       if (formRef.current) {
         formRef.current.reset();
       }
     } catch (error) {
-      console.error(error);
+      console.error("Error al enviar el formulario:", error);
+    }
+  };
+
+  const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (formRef.current) {
+      const formData = new FormData(formRef.current);
+      handleSubmit(formData);
     }
   };
 
   return (
-    <form
-      ref={formRef}
-      onSubmit={(e) => {
-        e.preventDefault();
-        if (formRef.current) {
-          const formData = new FormData(formRef.current);
-          handleSubmit(formData);
-        }
-      }}
-      noValidate
-    >
+    <form ref={formRef} onSubmit={handleFormSubmit} noValidate>
       <div className="mb-4">
         <input
           type="text"
